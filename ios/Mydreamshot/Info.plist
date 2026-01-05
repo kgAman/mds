@@ -34,7 +34,11 @@
 	<key>RCTNewArchEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
+<<<<<<< HEAD
 	<string>BootSplash</string>
+=======
+	<string></string>
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>arm64</string>

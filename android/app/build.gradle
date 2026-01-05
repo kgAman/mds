@@ -1,7 +1,10 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
+<<<<<<< HEAD
 apply plugin: "com.google.gms.google-services" 
+=======
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -83,9 +86,14 @@ android {
         applicationId "com.mydreamshot"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+<<<<<<< HEAD
         versionCode 21
         versionName "1.1"
         multiDexEnabled true 
+=======
+        versionCode 1
+        versionName "1.0"
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
     }
     signingConfigs {
         debug {
@@ -94,6 +102,7 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+<<<<<<< HEAD
          release {
             if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
                 storeFile file(MYAPP_RELEASE_STORE_FILE)
@@ -103,15 +112,24 @@ android {
             }
         }
          
+=======
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
     }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
         }
+<<<<<<< HEAD
          release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
             signingConfig signingConfigs.release
+=======
+        release {
+            // Caution! In production, you need to generate your own keystore file.
+            // see https://reactnative.dev/docs/signed-apk-android.
+            signingConfig signingConfigs.debug
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
@@ -119,14 +137,21 @@ android {
 }
 
 dependencies {
+<<<<<<< HEAD
     // implementation project(':react-native-splash-screen')
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
  
+=======
+    // The version of react-native is set by the React Native Gradle Plugin
+    implementation("com.facebook.react:react-android")
+
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {
         implementation jscFlavor
+<<<<<<< HEAD
     }   
     implementation(platform('com.google.firebase:firebase-bom:32.8.0')) 
     // Latest BOM version use karein
@@ -135,4 +160,7 @@ dependencies {
     // Multi-dex support library (Android < 21 ke liye)
     implementation('androidx.multidex:multidex:2.0.1') 
 
+=======
+    }
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
 }

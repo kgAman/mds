@@ -1,4 +1,8 @@
 <resources>
     <color name="white">#FFF</color>
+<<<<<<< HEAD
     <color name="bootsplash_background">#ffffff</color>
 </resources>
+=======
+</resources>
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903

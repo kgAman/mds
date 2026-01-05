@@ -1,3 +1,7 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">My Dream Shot</string>
+=======
+    <string name="app_name">Mydreamshot</string>
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
 </resources>

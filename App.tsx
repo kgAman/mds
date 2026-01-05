@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import {
   NavigationContainer,
   createNavigationContainerRef,
@@ -39,10 +40,24 @@ type ChatToastCustomProps = {
   sender_name: string;
   full_message: string;
   sender_profile: string;
+=======
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import NetInfo from '@react-native-community/netinfo';
+import { ActivityIndicator, View } from 'react-native';
+import Main from './Src/main/main';
+import InternetError from './Src/Error/InternetError/InternetError';
+
+
+export type RootStackParamList = {
+  Main: undefined;
+  InternetError: undefined;
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
+<<<<<<< HEAD
 /* ---------------- Custom Toast ---------------- */
 const ChatToast: React.FC<
   ToastProps & { props: ChatToastCustomProps }
@@ -139,16 +154,26 @@ export default function App() {
 
 
   /* -------- Internet Check -------- */
+=======
+export default function App() {
+  const [isConnected, setIsConnected] = useState<boolean | null>(null);
+
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener(state => {
       setIsConnected(state.isConnected ?? false);
     });
 
+<<<<<<< HEAD
     return unsubscribe;
+=======
+    return () => unsubscribe();
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
   }, []);
 
   if (isConnected === null) {
     return (
+<<<<<<< HEAD
       <View
         style={{
           flex: 1,
@@ -158,11 +183,21 @@ export default function App() {
         }}
       >
         <ActivityIndicator size="large" color="#4CAF50" />
+=======
+      <View style={{
+        flex: 1,
+        backgroundColor: '#000',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
+        <ActivityIndicator size="large" color="#fff" />
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
       </View>
     );
   }
 
   return (
+<<<<<<< HEAD
     <>
       <NavigationContainer ref={navigationRef}   >
         <Stack.Navigator screenOptions={{ headerShown: false }}
@@ -181,5 +216,15 @@ export default function App() {
       {/* Toast Root */}
       <Toast config={toastConfig} />
     </>
+=======
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Main">
+          {() => isConnected ? <Main/> : <InternetError />}
+        </Stack.Screen>
+        <Stack.Screen name="InternetError" component={InternetError} />
+      </Stack.Navigator>
+    </NavigationContainer>
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
   );
 }

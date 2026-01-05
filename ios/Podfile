@@ -6,20 +6,31 @@ require Pod::Executable.execute_command('node', ['-p',
   )', __dir__]).strip
 
 platform :ios, min_ios_version_supported
+<<<<<<< HEAD
 use_modular_headers!
+=======
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
 prepare_react_native_project!
 
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
   Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+<<<<<<< HEAD
   use_frameworks! :linkage => :static
+=======
+  use_frameworks! :linkage => linkage.to_sym
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
 end
 
 target 'Mydreamshot' do
   config = use_native_modules!
+<<<<<<< HEAD
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Messaging'
+=======
+
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
   use_react_native!(
     :path => config[:reactNativePath],
     # An absolute path to your application root.
@@ -34,4 +45,8 @@ target 'Mydreamshot' do
       # :ccache_enabled => true
     )
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> c3e44579ef282871bf4e45907a5f92b2fa97d903
