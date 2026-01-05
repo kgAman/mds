@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "181304905700",
+    "project_id": "mydreamshot-740f5",
+    "storage_bucket": "mydreamshot-740f5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181304905700:android:449cc99bba0e4342c881f1",
+        "android_client_info": {
+          "package_name": "com.mydreamshot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaOPWr1BQXgMAqinwvu1Arhw1lCaFCLwc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
